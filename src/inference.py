@@ -13,12 +13,12 @@ def get_model_and_tokenizer(model_name):
 
 if __name__ == "__main__":
     # 读取./sft_dataset/test.json文件
-    with open('/home/hhy/ASR/Ad-Detect-LLM/sft_data/test.json', 'r', encoding='utf-8') as f:
+    with open('/home/hhy/ASR/Ad-Detect-LLM/sft_dataset/test.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
 
 
     # model_name = "/mnt/e/LLM/Qwen3-0.6B"
-    model_name = "/home/hhy/ASR/Ad-Detect-LLM/output/v1-20250905-155935/checkpoint-100-merged/"
+    model_name = "/home/hhy/ASR/Ad-Detect-LLM/output_models/ckpt-140/"
     # model_name = "/mnt/e/LLM/Qwen3-4B-Instruct-2507"
 
     model, tokenizer = get_model_and_tokenizer(model_name)

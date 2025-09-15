@@ -189,7 +189,7 @@ pandas==2.2.2
 parso==0.8.4
 partial-json-parser==0.2.1.1.post6
 pathspec==0.12.1
-peft==0.14.0
+peft==0.17.1
 pexpect==4.9.0
 pickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1733327343728/work
 pillow==10.4.0
