@@ -47,4 +47,13 @@ swift export \
     --merge_lora true
 ```
 
-
+## 推理测试
+```python
+python ./src/inference.py
+```
+| Train Epoch | Acc on testset |
+|----------|----------|
+| 0       | 0.4479   |
+| 0.84    | 0.8376   |
+| 0.98    | 0.8366   |
+| 1.40    | 0.8588   |
