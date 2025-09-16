@@ -7,7 +7,8 @@ def get_model_and_tokenizer(model_name):
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         torch_dtype="auto",
-        device_map="auto"
+        device_map="auto",
+        trust_remote_code=True
     )
     return model, tokenizer
 
@@ -18,7 +19,11 @@ if __name__ == "__main__":
 
 
     # model_name = "/mnt/e/LLM/Qwen3-0.6B"
-    model_name = "/home/hhy/ASR/Ad-Detect-LLM/output_models/ckpt-140/"
+    model_name = "/home/hhy/ASR/Ad-Detect-LLM/output_models/Qwen3-0.6B/ckpt-200"
+
+    # model_name = "/mnt/e/LLM/MiniCPM4-0.5B"
+    # model_name = "/home/hhy/ASR/Ad-Detect-LLM/output_models/MiniCPM4-0.5B/ckpt-220"
+
     # model_name = "/mnt/e/LLM/Qwen3-4B-Instruct-2507"
 
     model, tokenizer = get_model_and_tokenizer(model_name)
@@ -49,10 +54,10 @@ if __name__ == "__main__":
         
         print(i, content, data[i]['messages'][2]['content'])
         # 如果判断正确
-        if '是' in content and '是' in data[i]['messages'][2]['content']:
+        if content[0] == '是' and '是' in data[i]['messages'][2]['content']:
             count += 1
             print('yes')
-        if '否' in content and '否' in data[i]['messages'][2]['content']:
+        if content[0] == '否' and '否' in data[i]['messages'][2]['content']:
             count += 1
             print('yes')
         if i % 100 == 0:

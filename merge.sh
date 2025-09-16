@@ -1,5 +1,7 @@
 swift export \
-    --model /home/hhy/.cache/modelscope/hub/models/Qwen/Qwen3-0___6B \
-    --adapters output/v1-20250915-102750/checkpoint-140 \
-    --output_dir output_models/ckpt-140 \
+    --model /mnt/e/LLM/Qwen3-0.6B \
+    --adapters output/v1-20250915-102750/checkpoint-200 \
+    --output_dir output_models/Qwen3-0.6B/ckpt-200 \
     --merge_lora true
+# /mnt/e/LLM/Qwen3-0.6B 
+# /mnt/e/LLM/MiniCPM4-0.5B
